@@ -1,0 +1,181 @@
+<!doctype html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>راه‌های ارتباط با انجمن‌های علمی دانشگاه علامه طباطبائی</title>
+  <style>
+    :root{
+      --bg:#f0fbff; /* very light blue */
+      --card:#ffffff;
+      --accent-1:#a7e9e0; /* mint */
+      --accent-2:#b7d7ff; /* light sky */
+      --btn-1: linear-gradient(135deg,var(--accent-2),#cfeff2);
+      --muted:#6b7280;
+      --text:#06283D;
+    }
+    *{box-sizing:border-box}
+    body{
+      font-family: "Vazirmatn", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+      margin:0; padding:28px; background:linear-gradient(180deg,var(--bg),#f6fbff); color:var(--text);
+      -webkit-font-smoothing:antialiased; -moz-osx-font-smoothing:grayscale;
+    }
+    .wrap{max-width:720px;margin:18px auto}
+    .card{background:var(--card);border-radius:16px;padding:28px;box-shadow:0 8px 30px rgba(6,40,61,0.06); border:1px solid rgba(6,40,61,0.04)}
+    h1{margin:0 0 6px;font-size:20px;text-align:center}
+    p.lead{margin:0 0 18px;color:var(--muted);text-align:center}
+    .links{display:grid;gap:12px;margin:18px 0 24px}
+    .link-btn{
+      display:flex;align-items:center;gap:12px;padding:14px 16px;border-radius:12px;text-decoration:none;color:var(--text);
+      background:var(--btn-1);font-weight:700;text-align:center;border:1px solid rgba(6,40,61,0.03);
+      box-shadow:0 6px 18px rgba(11,105,255,0.06)
+    }
+    .link-btn .tag{font-size:13px;color:var(--muted);font-weight:600}
+    .meta{display:flex;gap:16px;align-items:center;flex-wrap:wrap}
+    .qr-card{display:flex;gap:16px;align-items:center;padding:12px;border-radius:12px;background:linear-gradient(90deg,#ffffff,#f7ffff);border:1px solid rgba(6,40,61,0.03)}
+    .qr-canvas{width:140px;height:140px;display:flex;align-items:center;justify-content:center}
+    .small{color:var(--muted);font-size:13px}
+    .actions{margin-top:12px;display:flex;gap:8px;flex-wrap:wrap}
+    button{padding:8px 12px;border-radius:10px;border:0;background:var(--text);color:#fff;cursor:pointer}
+    .note{font-size:13px;color:var(--muted);text-align:center;margin-top:10px}
+    /* print-friendly */
+    @media print{
+      body{padding:12mm;background:white}
+      .card{box-shadow:none;border:0}
+      .qr-canvas{width:220px;height:220px}
+      .link-btn{page-break-inside:avoid}
+    }
+    /* small screens */
+    @media (max-width:480px){
+      .card{padding:18px}
+      .qr-canvas{width:120px;height:120px}
+    }
+  </style>
+  <!-- QRCode.js CDN -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js" defer></script>
+</head>
+<body>
+  <div class="wrap">
+    <div class="card" role="main" aria-labelledby="page-title">
+      <h1 id="page-title">راه‌های ارتباط با انجمن‌های علمی دانشگاه علامه طباطبائی</h1>
+      <p class="lead">اسکن QR یا کلیک روی هر دکمه برای ورود به کانال مربوطه</p>
+
+      <div class="links" id="links">
+        <a class="link-btn" href="https://t.me/economicsth" target="_blank" rel="noopener">
+          <span style="display:inline-block;width:10px;height:10px;border-radius:50%;background:#a7e9e0"></span>
+          <span>انجمن علمی اقتصاد</span>
+        </a>
+        <a class="link-btn" href="https://t.me/EDPSA" target="_blank" rel="noopener">
+          <span style="display:inline-block;width:10px;height:10px;border-radius:50%;background:#b7d7ff"></span>
+          <span>انجمن علمی توسعه اقتصادی و برنامه‌ریزی</span>
+        </a>
+        <a class="link-btn" href="https://t.me/atuenergy" target="_blank" rel="noopener">
+          <span style="display:inline-block;width:10px;height:10px;border-radius:50%;background:#cfeff2"></span>
+          <span>انجمن علمی اقتصاد انرژی و محیط زیست</span>
+        </a>
+        <a class="link-btn" href="https://t.me/EcommerceATU" target="_blank" rel="noopener">
+          <span style="display:inline-block;width:10px;height:10px;border-radius:50%;background:#e3f7ff"></span>
+          <span>انجمن علمی اقتصاد و تجارت الکترونیک</span>
+        </a>
+        <a class="link-btn" href="https://t.me/IESA_Atu" target="_blank" rel="noopener">
+          <span style="display:inline-block;width:10px;height:10px;border-radius:50%;background:#d6f2ec"></span>
+          <span>انجمن علمی اقتصاد اسلامی</span>
+        </a>
+        <a class="link-btn" href="http://instagram.com/economic_atu_nazari" target="_blank" rel="noopener">
+          <span style="display:inline-block;width:10px;height:10px;border-radius:50%;background:#ffdfe8"></span>
+          <span>اینستاگرام انجمن علمی اقتصاد</span>
+        </a>
+      </div>
+
+      <div class="meta">
+        <div class="qr-card" style="flex:0 0 auto">
+          <div id="qrcode" class="qr-canvas" aria-hidden="true"></div>
+          <div>
+            <div class="small">QR برای چاپ</div>
+            <div class="actions">
+              <button id="downloadBtn">دانلود QR</button>
+              <button id="printBtn">چاپ صفحه</button>
+            </div>
+          </div>
+        </div>
+        <div style="margin-left:auto;max-width:360px">
+          <div class="small"><strong>نکتهٔ فنی</strong>: این QR حاوی یک صفحهٔ کوچکِ HTML است — یعنی لازم نیست صفحه را روی اینترنت آپلود کنی؛ اسکنِ کد، صفحه‌ای شبیه همینِ محتوا را در مرورگر باز می‌کند.</div>
+          <div class="note">اگر می‌خوای فایل HTML هم داشته باشی تا بعداً روی وب آپلود کنی، دکمهٔ «دانلود HTML» پایین رو بزن.</div>
+        </div>
+      </div>
+
+      <div style="text-align:center;margin-top:18px">
+        <button id="downloadHtmlBtn">دانلود HTML</button>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // printable HTML that will be encoded inside the QR as a data URL
+    const shareHtml = `<!doctype html><html lang="fa" dir="rtl"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>راه‌های ارتباط با انجمن‌های علمی دانشگاه علامه طباطبائی</title><style>body{font-family:system-ui,Arial;padding:20px;background:#f8ffff;color:#06283D}a{display:block;margin:10px 0;padding:12px;border-radius:10px;background:#e8f9f7;text-decoration:none;color:#06283D;font-weight:700}</style></head><body><h2>راه‌های ارتباط با انجمن‌های علمی دانشگاه علامه طباطبائی</h2><a href="https://t.me/economicsth">انجمن علمی اقتصاد</a><a href="https://t.me/EDPSA">انجمن علمی توسعه اقتصادی و برنامه‌ریزی</a><a href="https://t.me/atuenergy">انجمن علمی اقتصاد انرژی و محیط زیست</a><a href="https://t.me/EcommerceATU">انجمن علمی اقتصاد و تجارت الکترونیک</a><a href="https://t.me/IESA_Atu">انجمن علمی اقتصاد اسلامی</a><a href="http://instagram.com/economic_atu_nazari">اینستاگرام انجمن علمی اقتصاد</a></body></html>`;
+
+    // create data URL (base64) of shareHtml
+    function toBase64Unicode(str) {
+      // btoa(unescape(encodeURIComponent(str))) for unicode-safe base64
+      return btoa(unescape(encodeURIComponent(str)));
+    }
+    const dataUrl = 'data:text/html;charset=utf-8;base64,' + toBase64Unicode(shareHtml);
+
+    // generate QR for the dataUrl
+    window.addEventListener('load', () => {
+      const qElem = document.getElementById('qrcode');
+      qElem.innerHTML = '';
+      const qr = new QRCode(qElem, {
+        text: dataUrl,
+        width: 220,
+        height: 220,
+        correctLevel: QRCode.CorrectLevel.H
+      });
+
+      // download QR as PNG
+      document.getElementById('downloadBtn').addEventListener('click', () => {
+        const canvas = qElem.querySelector('canvas');
+        if (canvas) {
+          const url = canvas.toDataURL('image/png');
+          const a = document.createElement('a');
+          a.href = url;
+          a.download = 'atu_links_qr.png';
+          document.body.appendChild(a);
+          a.click();
+          a.remove();
+          return;
+        }
+        const img = qElem.querySelector('img');
+        if (img) {
+          const a = document.createElement('a');
+          a.href = img.src;
+          a.download = 'atu_links_qr.png';
+          document.body.appendChild(a);
+          a.click();
+          a.remove();
+          return;
+        }
+        alert('قابلیت دانلود QR موجود نیست.');
+      });
+
+      // print page
+      document.getElementById('printBtn').addEventListener('click', () => {
+        window.print();
+      });
+
+      // download HTML file
+      document.getElementById('downloadHtmlBtn').addEventListener('click', () => {
+        const blob = new Blob([`<!doctype html>\n${shareHtml}`], {type: 'text/html;charset=utf-8'});
+        const url = URL.createObjectURL(blob);
+        const a = document.createElement('a');
+        a.href = url;
+        a.download = 'atu_links.html';
+        document.body.appendChild(a);
+        a.click();
+        a.remove();
+        setTimeout(() => URL.revokeObjectURL(url), 1000);
+      });
+    });
+  </script>
+</body>
+</html>
